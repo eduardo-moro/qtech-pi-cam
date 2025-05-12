@@ -1,0 +1,14 @@
+[Unit]
+Description=Python API Service
+After=network.target
+
+[Service]
+User=finn
+WorkingDirectory=/home/finn/stream-api/
+ExecStart=/home/finn/stream-api/.venv/bin/python3 /home/finn/stream-api/main.py
+Restart=always
+Environment="API_PORT=8888"
+Environment="API_HOST=0.0.0.0"
+
+[Install]
+WantedBy=multi-user.target
