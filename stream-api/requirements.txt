@@ -1,0 +1,8 @@
+flask
+opencv-python-headless
+humanize
+sounddevice
+numpy
+uvicorn
+gunicorn
+picamera2
