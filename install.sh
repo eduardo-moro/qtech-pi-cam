@@ -38,10 +38,10 @@ echo ""
 
 
 # Set up Python virtual environment and dependencies
-cd /home/finn/stream-api || { echo "stream-api directory missing"; exit 1; }
+cd /home/quadritech/stream-api || { echo "stream-api directory missing"; exit 1; }
 rm -rf .venv
 python3 -m venv .venv
-/home/finn/stream-api/.venv/bin/pip install -r /home/finn/stream-api/requirements.txt
+/home/quadritech/stream-api/.venv/bin/pip install -r /home/quadritech/stream-api/requirements.txt
 
 echo ""
 echo "███████╗██████╗  ██████╗ ███╗   ██╗████████╗███████╗███╗   ██╗██████╗ "
@@ -54,7 +54,7 @@ echo ""
 
 
 # Build React frontend
-cd /home/finn/stream-frontend || { echo "stream-frontend directory missing"; exit 1; }
+cd /home/quadritech/stream-frontend || { echo "stream-frontend directory missing"; exit 1; }
 sudo npm install
 npm run build
 
@@ -133,11 +133,11 @@ echo ""
 
 
 # Move systemd services and Nginx config
-sudo mv /home/finn/api.service /etc/systemd/system/
-sudo mv /home/finn/default /etc/nginx/sites-available/
-sudo chmod 755 /home/finn
-sudo chown -R finn:www-data /home/finn/stream-frontend/build
-sudo chmod -R 755 /home/finn/stream-frontend/build
+sudo mv /home/quadritech/api.service /etc/systemd/system/
+sudo mv /home/quadritech/default /etc/nginx/sites-available/
+sudo chmod 755 /home/quadritech
+sudo chown -R quadritech:www-data /home/quadritech/stream-frontend/build
+sudo chmod -R 755 /home/quadritech/stream-frontend/build
 
 # Reload systemd and enable/start services
 sudo systemctl daemon-reload
