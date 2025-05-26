@@ -1,11 +1,13 @@
 [Unit]
 Description=Python API Service
-After=network.target
+After=network.target hostapd.service dnsmasq.service
+After=network-online.target
+Wants=network-online.target
 
 [Service]
-User=finn
-WorkingDirectory=/home/finn/stream-api/
-ExecStart=/home/finn/stream-api/.venv/bin/python3 /home/finn/stream-api/main.py
+User=quadritech
+WorkingDirectory=/home/quadritech/stream-api/
+ExecStart=/home/quadritech/stream-api/.venv/bin/python3 /home/quadritech/stream-api/main.py
 Restart=always
 Environment="API_PORT=8888"
 Environment="API_HOST=0.0.0.0"
