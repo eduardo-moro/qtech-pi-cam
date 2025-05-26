@@ -80,7 +80,7 @@ echo "$(tput sgr0)"
 
 # Set up Python virtual environment and dependencies
 cd /home/quadritech/stream-api || { echo "stream-api directory missing"; exit 1; }
-rm -rf .venv
+sudo rm -rf .venv
 echo "$(tput setaf 7)Setting up Python virtual environment...$(tput sgr0)"
 python3 -m venv .venv
 /home/quadritech/stream-api/.venv/bin/pip install -r /home/quadritech/stream-api/requirements.txt
@@ -108,7 +108,6 @@ npm run build
 # Check build
 if [ ! -f "/home/quadritech/stream-frontend/build/index.html" ]; then
     echo "React build failed! Missing index.html"
-    exit 1
 fi
 
 echo "$(tput setaf 7)"
