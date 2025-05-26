@@ -49,7 +49,9 @@ echo "╚═╝  ╚═══╝ ╚═════╝ ╚═════╝ ╚
 echo "$(tput sgr0)"
 
 # Install nvm
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
+curl -o nvm-install.sh https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh
+chmod +x nvm-install.sh
+bash ./nvm-install.sh
 
 # Load nvm
 export NVM_DIR="$HOME/.nvm"
