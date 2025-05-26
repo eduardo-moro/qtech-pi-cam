@@ -1,13 +1,23 @@
 #!/bin/bash
+echo "$(tput setaf 231)"
+echo "$(tput setaf 1) ██████╗ $(tput setaf 231)████████╗███████╗ ██████╗██╗  ██╗      ██████╗ ██╗       ██████╗ █████╗ ███╗   ███╗$(tput sgr0)"
+echo "$(tput setaf 1)██╔═══██╗$(tput setaf 231)╚══██╔══╝██╔════╝██╔════╝██║  ██║      ██╔══██╗██║      ██╔════╝██╔══██╗████╗ ████║$(tput sgr0)"
+echo "$(tput setaf 1)██║   ██║$(tput setaf 231)   ██║   █████╗  ██║     ███████║█████╗██████╔╝██║█████╗██║     ███████║██╔████╔██║$(tput sgr0)"
+echo "$(tput setaf 1)██║▄▄ ██║$(tput setaf 231)   ██║   ██╔══╝  ██║     ██╔══██║╚════╝██╔═══╝ ██║╚════╝██║     ██╔══██║██║╚██╔╝██║$(tput sgr0)"
+echo "$(tput setaf 1)╚██████╔╝$(tput setaf 231)   ██║   ███████╗╚██████╗██║  ██║      ██║     ██║      ╚██████╗██║  ██║██║ ╚═╝ ██║$(tput sgr0)"
+echo "$(tput setaf 1) ╚══▀▀═╝ $(tput setaf 231)   ╚═╝   ╚══════╝ ╚═════╝╚═╝  ╚═╝      ╚═╝     ╚═╝       ╚═════╝╚═╝  ╚═╝╚═╝     ╚═╝$(tput sgr0)"
+echo ""               $(tput sgr0)     
 
-echo ""
+echo ""                                                                 
+
+echo "$(tput setaf 231)"
 echo " █████╗ ██████╗ ████████╗    ██╗███╗   ██╗███████╗████████╗ █████╗ ██╗     ██╗     "
 echo "██╔══██╗██╔══██╗╚══██╔══╝    ██║████╗  ██║██╔════╝╚══██╔══╝██╔══██╗██║     ██║     "
 echo "███████║██████╔╝   ██║       ██║██╔██╗ ██║███████╗   ██║   ███████║██║     ██║     "
 echo "██╔══██║██╔═══╝    ██║       ██║██║╚██╗██║╚════██║   ██║   ██╔══██║██║     ██║     "
 echo "██║  ██║██║        ██║       ██║██║ ╚████║███████║   ██║   ██║  ██║███████╗███████╗"
 echo "╚═╝  ╚═╝╚═╝        ╚═╝       ╚═╝╚═╝  ╚═══╝╚══════╝   ╚═╝   ╚═╝  ╚═╝╚══════╝╚══════╝"
-echo ""
+echo "$(tput sgr0)"
 
 # Update system and install dependencies
 sudo apt update && sudo apt upgrade -y
@@ -29,27 +39,27 @@ sudo apt install -y \
     wireless-tools \
     rfkill 
 
-echo ""
+echo "$(tput setaf 231)"
 echo "███╗   ██╗ ██████╗ ██████╗ ███████╗"
 echo "████╗  ██║██╔═══██╗██╔══██╗██╔════╝"
 echo "██╔██╗ ██║██║   ██║██║  ██║█████╗  "
 echo "██║╚██╗██║██║   ██║██║  ██║██╔══╝  "
 echo "██║ ╚████║╚██████╔╝██████╔╝███████╗"
 echo "╚═╝  ╚═══╝ ╚═════╝ ╚═════╝ ╚══════╝"
-echo ""
+echo "$(tput sgr0)"
 
 # Install Node.js LTS
 curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
 sudo apt install -y nodejs
 
-echo ""
+echo "$(tput setaf 231)"
 echo "██████╗ ██╗   ██╗████████╗██╗  ██╗ ██████╗ ███╗   ██╗"
 echo "██╔══██╗╚██╗ ██╔╝╚══██╔══╝██║  ██║██╔═══██╗████╗  ██║"
 echo "██████╔╝ ╚████╔╝    ██║   ███████║██║   ██║██╔██╗ ██║"
 echo "██╔═══╝   ╚██╔╝     ██║   ██╔══██║██║   ██║██║╚██╗██║"
 echo "██║        ██║      ██║   ██║  ██║╚██████╔╝██║ ╚████║"
 echo "╚═╝        ╚═╝      ╚═╝   ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝"
-echo ""
+echo "$(tput sgr0)"
 
 
 # Set up Python virtual environment and dependencies
@@ -58,14 +68,14 @@ rm -rf .venv
 python3 -m venv .venv
 /home/quadritech/stream-api/.venv/bin/pip install -r /home/quadritech/stream-api/requirements.txt
 
-echo ""
+echo "$(tput setaf 231)"
 echo "███████╗██████╗  ██████╗ ███╗   ██╗████████╗███████╗███╗   ██╗██████╗ "
 echo "██╔════╝██╔══██╗██╔═══██╗████╗  ██║╚══██╔══╝██╔════╝████╗  ██║██╔══██╗"
 echo "█████╗  ██████╔╝██║   ██║██╔██╗ ██║   ██║   █████╗  ██╔██╗ ██║██║  ██║"
 echo "██╔══╝  ██╔══██╗██║   ██║██║╚██╗██║   ██║   ██╔══╝  ██║╚██╗██║██║  ██║"
 echo "██║     ██║  ██║╚██████╔╝██║ ╚████║   ██║   ███████╗██║ ╚████║██████╔╝"
 echo "╚═╝     ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝   ╚═╝   ╚══════╝╚═╝  ╚═══╝╚═════╝ "
-echo ""
+echo "$(tput sgr0)"
 
 cat > /home/quadritech/stream-frontend/.env <<EOL
 REACT_APP_API_URL=http://192.168.4.1/api
@@ -74,6 +84,7 @@ EOL
 
 # Build React frontend
 cd /home/quadritech/stream-frontend || { echo "stream-frontend directory missing"; exit 1; }
+echo "$(tput setaf 123)Installing React dependencies...$(tput sgr0)"
 sudo npm install
 npm run build
 
@@ -83,14 +94,14 @@ if [ ! -f "/home/quadritech/stream-frontend/build/index.html" ]; then
     exit 1
 fi
 
-echo ""
+echo "$(tput setaf 231)"
 echo " █████╗  ██████╗ ██████╗███████╗███████╗███████╗    ██████╗  ██████╗ ██╗███╗   ██╗████████╗"
 echo "██╔══██╗██╔════╝██╔════╝██╔════╝██╔════╝██╔════╝    ██╔══██╗██╔═══██╗██║████╗  ██║╚══██╔══╝"
 echo "███████║██║     ██║     █████╗  ███████╗███████╗    ██████╔╝██║   ██║██║██╔██╗ ██║   ██║   "
 echo "██╔══██║██║     ██║     ██╔══╝  ╚════██║╚════██║    ██╔═══╝ ██║   ██║██║██║╚██╗██║   ██║   "
 echo "██║  ██║╚██████╗╚██████╗███████╗███████║███████║    ██║     ╚██████╔╝██║██║ ╚████║   ██║   "
 echo "╚═╝  ╚═╝ ╚═════╝ ╚═════╝╚══════╝╚══════╝╚══════╝    ╚═╝      ╚═════╝ ╚═╝╚═╝  ╚═══╝   ╚═╝   "
-echo ""
+echo "$(tput sgr0)"
 
 # ======================
 # NETWORKING CONFIGURATION
@@ -206,14 +217,14 @@ sudo systemctl restart dhcpcd
 
 echo "Networking configuration complete!"
 
-echo ""
+echo "$(tput setaf 231)"
 echo "███████╗██╗   ██╗███████╗████████╗███████╗███╗   ███╗    ██████╗ "
 echo "██╔════╝╚██╗ ██╔╝██╔════╝╚══██╔══╝██╔════╝████╗ ████║    ██╔══██╗"
 echo "███████╗ ╚████╔╝ ███████╗   ██║   █████╗  ██╔████╔██║    ██║  ██║"
 echo "╚════██║  ╚██╔╝  ╚════██║   ██║   ██╔══╝  ██║╚██╔╝██║    ██║  ██║"
 echo "███████║   ██║   ███████║   ██║   ███████╗██║ ╚═╝ ██║    ██████╔╝"
 echo "╚══════╝   ╚═╝   ╚══════╝   ╚═╝   ╚══════╝╚═╝     ╚═╝    ╚═════╝ "
-echo ""
+echo "$(tput sgr0)"
 
 
 # Move systemd services and Nginx config
@@ -237,17 +248,17 @@ sudo systemctl enable create-wlan0.service hostapd.service dnsmasq.service
 sudo systemctl enable nginx.service api.service
 
 
-echo ""
+echo "$(tput setaf 231)"
 echo "██████╗ ███████╗██╗      ██████╗  █████╗ ██████╗ ██╗███╗   ██╗ ██████╗ "
 echo "██╔══██╗██╔════╝██║     ██╔═══██╗██╔══██╗██╔══██╗██║████╗  ██║██╔════╝ "
 echo "██████╔╝█████╗  ██║     ██║   ██║███████║██║  ██║██║██╔██╗ ██║██║  ███╗"
 echo "██╔══██╗██╔══╝  ██║     ██║   ██║██╔══██║██║  ██║██║██║╚██╗██║██║   ██║"
 echo "██║  ██║███████╗███████╗╚██████╔╝██║  ██║██████╔╝██║██║ ╚████║╚██████╔╝"
 echo "╚═╝  ╚═╝╚══════╝╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚═════╝ ╚═╝╚═╝  ╚═══╝ ╚═════╝ "
-echo ""
+echo "$(tput sgr0)"
 
 
-echo ""
+echo "$(tput setaf 231)"
 echo "Setup complete! Rebooting in 5 seconds..."
 sleep 5
-sudo reboot
+sudo reboo$(tput sgr0)t
