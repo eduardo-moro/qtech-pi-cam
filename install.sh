@@ -48,9 +48,23 @@ echo "██║ ╚████║╚██████╔╝██████�
 echo "╚═╝  ╚═══╝ ╚═════╝ ╚═════╝ ╚══════╝"
 echo "$(tput sgr0)"
 
-# Install Node.js LTS
-curl -fsSL https://deb.nodesource.com/setup_20.16.x | sudo -E bash -
-sudo apt install -y nodejs
+# Install nvm
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
+
+# Load nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+
+# Install Node.js using nvm
+nvm install 20.16.0
+nvm use 20.16.0
+nvm alias default 20.16.0
+
+# Verify Node.js and npm installation
+echo "$(tput setaf 7)Verifying Node.js and npm installation...$(tput sgr0)"
+node -v
+npm -v 
 
 echo "$(tput setaf 7)"
 echo "██████╗ ██╗   ██╗████████╗██╗  ██╗ ██████╗ ███╗   ██╗"
