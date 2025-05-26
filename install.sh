@@ -1,11 +1,11 @@
 #!/bin/bash
 echo "$(tput setaf 231)"
-echo "$(tput setaf 1) ██████╗ $(tput setaf 231)████████╗███████╗ ██████╗██╗  ██╗      ██████╗ ██╗       ██████╗ █████╗ ███╗   ███╗$(tput sgr0)"
-echo "$(tput setaf 1)██╔═══██╗$(tput setaf 231)╚══██╔══╝██╔════╝██╔════╝██║  ██║      ██╔══██╗██║      ██╔════╝██╔══██╗████╗ ████║$(tput sgr0)"
-echo "$(tput setaf 1)██║   ██║$(tput setaf 231)   ██║   █████╗  ██║     ███████║█████╗██████╔╝██║█████╗██║     ███████║██╔████╔██║$(tput sgr0)"
-echo "$(tput setaf 1)██║▄▄ ██║$(tput setaf 231)   ██║   ██╔══╝  ██║     ██╔══██║╚════╝██╔═══╝ ██║╚════╝██║     ██╔══██║██║╚██╔╝██║$(tput sgr0)"
-echo "$(tput setaf 1)╚██████╔╝$(tput setaf 231)   ██║   ███████╗╚██████╗██║  ██║      ██║     ██║      ╚██████╗██║  ██║██║ ╚═╝ ██║$(tput sgr0)"
-echo "$(tput setaf 1) ╚══▀▀═╝ $(tput setaf 231)   ╚═╝   ╚══════╝ ╚═════╝╚═╝  ╚═╝      ╚═╝     ╚═╝       ╚═════╝╚═╝  ╚═╝╚═╝     ╚═╝$(tput sgr0)"
+echo "$(tput setaf 1) ██████╗ $(tput setaf 15)████████╗███████╗ ██████╗██╗  ██╗      ██████╗ ██╗       ██████╗ █████╗ ███╗   ███╗$(tput sgr0)"
+echo "$(tput setaf 1)██╔═══██╗$(tput setaf 15)╚══██╔══╝██╔════╝██╔════╝██║  ██║      ██╔══██╗██║      ██╔════╝██╔══██╗████╗ ████║$(tput sgr0)"
+echo "$(tput setaf 1)██║   ██║$(tput setaf 15)   ██║   █████╗  ██║     ███████║█████╗██████╔╝██║█████╗██║     ███████║██╔████╔██║$(tput sgr0)"
+echo "$(tput setaf 1)██║▄▄ ██║$(tput setaf 15)   ██║   ██╔══╝  ██║     ██╔══██║╚════╝██╔═══╝ ██║╚════╝██║     ██╔══██║██║╚██╔╝██║$(tput sgr0)"
+echo "$(tput setaf 1)╚██████╔╝$(tput setaf 15)   ██║   ███████╗╚██████╗██║  ██║      ██║     ██║      ╚██████╗██║  ██║██║ ╚═╝ ██║$(tput sgr0)"
+echo "$(tput setaf 1) ╚══▀▀═╝ $(tput setaf 15)   ╚═╝   ╚══════╝ ╚═════╝╚═╝  ╚═╝      ╚═╝     ╚═╝       ╚═════╝╚═╝  ╚═╝╚═╝     ╚═╝$(tput sgr0)"
 echo ""               $(tput sgr0)     
 
 echo ""                                                                 
@@ -49,7 +49,7 @@ echo "╚═╝  ╚═══╝ ╚═════╝ ╚═════╝ ╚
 echo "$(tput sgr0)"
 
 # Install Node.js LTS
-curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
+curl -fsSL https://deb.nodesource.com/setup_20.16.x | sudo -E bash -
 sudo apt install -y nodejs
 
 echo "$(tput setaf 231)"
@@ -65,6 +65,7 @@ echo "$(tput sgr0)"
 # Set up Python virtual environment and dependencies
 cd /home/quadritech/stream-api || { echo "stream-api directory missing"; exit 1; }
 rm -rf .venv
+echo "$(tput setaf 231)Setting up Python virtual environment...$(tput sgr0)"
 python3 -m venv .venv
 /home/quadritech/stream-api/.venv/bin/pip install -r /home/quadritech/stream-api/requirements.txt
 
